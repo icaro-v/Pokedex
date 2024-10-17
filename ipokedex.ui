@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>591</width>
-    <height>561</height>
+    <width>627</width>
+    <height>591</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>591</width>
-      <height>561</height>
+      <width>621</width>
+      <height>591</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -42,7 +42,7 @@
      <property name="geometry">
       <rect>
        <x>60</x>
-       <y>20</y>
+       <y>70</y>
        <width>461</width>
        <height>201</height>
       </rect>
@@ -54,50 +54,70 @@
      <property name="text">
       <string/>
      </property>
+     <property name="pixmap">
+      <pixmap>icon-anydesk.jpg</pixmap>
+     </property>
     </widget>
     <widget class="QLabel" name="LbTipo1">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>260</y>
+       <y>310</y>
        <width>171</width>
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: purple
+      <string notr="true">border: 2px solid black;
+border-radius: 20px;
+background-color: purple
 </string>
      </property>
      <property name="text">
       <string/>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="LbTipo2">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>310</y>
+       <y>360</y>
        <width>171</width>
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: green
+      <string notr="true">border: 2px solid black;
+border-radius: 20px;
+background-color: green
 
 </string>
      </property>
      <property name="text">
       <string/>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QPushButton" name="BtnPrevious">
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>310</y>
+       <y>360</y>
        <width>131</width>
        <height>41</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid black;
+border-radius: 20px;</string>
      </property>
      <property name="text">
       <string>Anterior</string>
@@ -107,10 +127,14 @@
      <property name="geometry">
       <rect>
        <x>430</x>
-       <y>310</y>
+       <y>360</y>
        <width>131</width>
        <height>41</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid black;
+border-radius: 20px;</string>
      </property>
      <property name="text">
       <string>Próximo</string>
@@ -120,10 +144,14 @@
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>260</y>
+       <y>310</y>
        <width>131</width>
        <height>41</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid black;
+border-radius: 20px;</string>
      </property>
      <property name="text">
       <string>Add Poké</string>
@@ -133,23 +161,62 @@
      <property name="geometry">
       <rect>
        <x>430</x>
-       <y>260</y>
+       <y>310</y>
        <width>131</width>
        <height>41</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid black;
+border-radius: 20px;</string>
      </property>
      <property name="text">
       <string>Edit Poké</string>
      </property>
     </widget>
-    <widget class="QTextBrowser" name="TBDescricao">
+    <widget class="QLabel" name="LbDescricao">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>380</y>
-       <width>571</width>
-       <height>171</height>
+       <x>30</x>
+       <y>420</y>
+       <width>551</width>
+       <height>161</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid black;
+padding: 15px;
+background-color: white</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LbNome">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>10</y>
+       <width>281</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid black;
+font-size: 24px; 
+font-weight: bold;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::WinPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>

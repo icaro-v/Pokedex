@@ -3,3 +3,5 @@ from PySide6.QtCore import Qt, QSize, QCoreApplication
 from PySide6.QtGui import QPixmap, QCursor, QIcon, QImage
 from ipokedex import Ui_pokedex
 import sys, os, socket, io
+from pokemon import Pokemon
+from type import Type

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\dev10\Desktop\Pokedex\ipokedex.ui'
+# Form implementation generated from reading ui file 'C:\Users\dev10\Desktop\Escola\Pokedex\ipokedex.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_pokedex(object):
     def setupUi(self, pokedex):
         pokedex.setObjectName("pokedex")
-        pokedex.resize(627, 591)
+        pokedex.resize(610, 591)
         self.centralwidget = QtWidgets.QWidget(pokedex)
         self.centralwidget.setObjectName("centralwidget")
         self.FramePrincipal = QtWidgets.QFrame(self.centralwidget)
@@ -25,15 +25,16 @@ class Ui_pokedex(object):
         sizePolicy.setHeightForWidth(self.FramePrincipal.sizePolicy().hasHeightForWidth())
         self.FramePrincipal.setSizePolicy(sizePolicy)
         self.FramePrincipal.setAutoFillBackground(False)
+        self.FramePrincipal.setStyleSheet("background-color:#FFB6C1")
         self.FramePrincipal.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.FramePrincipal.setFrameShadow(QtWidgets.QFrame.Raised)
         self.FramePrincipal.setObjectName("FramePrincipal")
         self.LbImagem = QtWidgets.QLabel(self.FramePrincipal)
-        self.LbImagem.setGeometry(QtCore.QRect(60, 70, 461, 201))
-        self.LbImagem.setStyleSheet("background-color: lightblue\n"
-"")
+        self.LbImagem.setGeometry(QtCore.QRect(190, 70, 220, 220))
+        self.LbImagem.setStyleSheet("")
         self.LbImagem.setText("")
-        self.LbImagem.setPixmap(QtGui.QPixmap("C:\\Users\\dev10\\Desktop\\Pokedex\\icon-anydesk.jpg"))
+        self.LbImagem.setPixmap(QtGui.QPixmap("C:\\Users\\dev10\\Desktop\\Escola\\Pokedex\\img/pokemons/bulbasaur.png"))
+        self.LbImagem.setAlignment(QtCore.Qt.AlignCenter)
         self.LbImagem.setObjectName("LbImagem")
         self.LbTipo1 = QtWidgets.QLabel(self.FramePrincipal)
         self.LbTipo1.setGeometry(QtCore.QRect(30, 310, 171, 41))

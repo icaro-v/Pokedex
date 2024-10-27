@@ -15,3 +15,4 @@ class DatabaseSingleton:
                 port=5432
             )
         return DatabaseSingleton._instance
+    

@@ -55,7 +55,7 @@ class UiPokedex(QMainWindow, Ui_pokedex):
                     self.pokemons[-1].type1 = pokemon_type
 
                 if pokemon.type2 == None:
-                    self.pokemons[-1].type2 = p(0, '', '', '', '')    
+                    self.pokemons[-1].type2 = t(0, '', '')    
                 elif pokemon.type2.id == pokemon_type.id:
                     self.pokemons[-1].type2 = pokemon.type2       
 

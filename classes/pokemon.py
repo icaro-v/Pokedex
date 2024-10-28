@@ -1,4 +1,4 @@
-from entity import Entity
+from .entity import Entity
 
 class Pokemon (Entity):
     def __init__(self, id, name, type1, type2, description):

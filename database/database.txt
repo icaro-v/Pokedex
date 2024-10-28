@@ -1,0 +1,49 @@
+==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++
+
+CREATE TABLE types (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    color VARCHAR(30)
+);
+
+==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++
+
+CREATE TABLE public.pokemon (
+    id serial4 NOT NULL,
+    "name" varchar(255) NOT NULL,
+    type1 int4 NULL,
+    type2 int4 NULL,
+    total int4 NULL,
+    hp int4 NULL,
+    attack int4 NULL,
+    defense int4 NULL,
+    special_atk int4 NULL,
+    special_def int4 NULL,
+    speed int4 NULL,
+    description TEXT,
+    CONSTRAINT pokemon_pkey PRIMARY KEY (id),
+    CONSTRAINT fk_pokemontype1 FOREIGN KEY (type1) REFERENCES public."type"(id) ON DELETE CASCADE,
+    CONSTRAINT fk_pokemontype2 FOREIGN KEY (type2) REFERENCES public."type"(id) ON DELETE CASCADE
+);
+
+==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++
+
+CREATE TABLE moves (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    type INT,
+    FOREIGN KEY (type) REFERENCES types(id)
+);
+
+==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++
+
+CREATE TABLE type_relationships (
+    id SERIAL PRIMARY KEY,
+    attacker_type INT,
+    defender_type INT,
+    effectiveness DECIMAL(3, 2),  -- Por exemplo, 2.00 para forte, 0.50 para fraco
+    FOREIGN KEY (attacker_type) REFERENCES types(id),
+    FOREIGN KEY (defender_type) REFERENCES types(id)
+);
+
+==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++

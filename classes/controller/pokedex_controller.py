@@ -42,7 +42,7 @@ class PokedexController(QMainWindow, Ui_pokedex):
         self.pokemons = []
         self.pokemons.append(p(0, '', '', '', '')) 
         for pokemon in db.pokemons_database:
-            poke = tc(p(pokemon.id, pokemon.name, pokemon.type1.name, pokemon.type2.name if pokemon.type2 else '', ''), self.types)
+            poke = tc(p(pokemon.id, pokemon.name, pokemon.type1.name, pokemon.type2.name if pokemon.type2 else '', pokemon.description), self.types)
             self.pokemons.append(poke.decorated()) 
 
         self.current = 1

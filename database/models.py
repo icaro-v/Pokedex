@@ -13,3 +13,4 @@ class Pokemon(BaseModel):
     name = CharField()
     type1 = ForeignKeyField(Type, backref='pokemons_type1', column_name='type1')
     type2 = ForeignKeyField(Type, backref='pokemons_type2', null=True, column_name='type2') 
+    description = CharField() 

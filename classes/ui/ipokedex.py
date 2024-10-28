@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\dev10\Desktop\Escola\Pokedex\ipokedex.ui'
+# Form implementation generated from reading ui file 'C:\Users\dev10\Desktop\Escola\Pokedex\classes\ui\ipokedex.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -14,7 +14,18 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_pokedex(object):
     def setupUi(self, pokedex):
         pokedex.setObjectName("pokedex")
-        pokedex.resize(610, 591)
+        pokedex.resize(605, 605)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(pokedex.sizePolicy().hasHeightForWidth())
+        pokedex.setSizePolicy(sizePolicy)
+        pokedex.setMinimumSize(QtCore.QSize(605, 605))
+        pokedex.setMaximumSize(QtCore.QSize(605, 600))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("C:\\Users\\dev10\\Desktop\\Escola\\Pokedex\\classes\\ui\\../../img/pokeball.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        pokedex.setWindowIcon(icon)
+        pokedex.setTabShape(QtWidgets.QTabWidget.Triangular)
         self.centralwidget = QtWidgets.QWidget(pokedex)
         self.centralwidget.setObjectName("centralwidget")
         self.FramePrincipal = QtWidgets.QFrame(self.centralwidget)
@@ -25,19 +36,19 @@ class Ui_pokedex(object):
         sizePolicy.setHeightForWidth(self.FramePrincipal.sizePolicy().hasHeightForWidth())
         self.FramePrincipal.setSizePolicy(sizePolicy)
         self.FramePrincipal.setAutoFillBackground(False)
-        self.FramePrincipal.setStyleSheet("background-color:#FFB6C1")
+        self.FramePrincipal.setStyleSheet("background-color:#FFFFFF")
         self.FramePrincipal.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.FramePrincipal.setFrameShadow(QtWidgets.QFrame.Raised)
         self.FramePrincipal.setObjectName("FramePrincipal")
         self.LbImagem = QtWidgets.QLabel(self.FramePrincipal)
-        self.LbImagem.setGeometry(QtCore.QRect(190, 70, 220, 220))
+        self.LbImagem.setGeometry(QtCore.QRect(320, 70, 220, 220))
         self.LbImagem.setStyleSheet("")
         self.LbImagem.setText("")
-        self.LbImagem.setPixmap(QtGui.QPixmap("C:\\Users\\dev10\\Desktop\\Escola\\Pokedex\\img/pokemons/bulbasaur.png"))
+        self.LbImagem.setPixmap(QtGui.QPixmap("C:\\Users\\dev10\\Desktop\\Escola\\Pokedex\\classes\\ui\\img/pokemons/bulbasaur.png"))
         self.LbImagem.setAlignment(QtCore.Qt.AlignCenter)
         self.LbImagem.setObjectName("LbImagem")
         self.LbTipo1 = QtWidgets.QLabel(self.FramePrincipal)
-        self.LbTipo1.setGeometry(QtCore.QRect(30, 310, 171, 41))
+        self.LbTipo1.setGeometry(QtCore.QRect(30, 130, 181, 51))
         self.LbTipo1.setStyleSheet("border: 2px solid black;\n"
 "border-radius: 20px;\n"
 "background-color: purple\n"
@@ -47,7 +58,7 @@ class Ui_pokedex(object):
         self.LbTipo1.setAlignment(QtCore.Qt.AlignCenter)
         self.LbTipo1.setObjectName("LbTipo1")
         self.LbTipo2 = QtWidgets.QLabel(self.FramePrincipal)
-        self.LbTipo2.setGeometry(QtCore.QRect(30, 360, 171, 41))
+        self.LbTipo2.setGeometry(QtCore.QRect(30, 210, 181, 51))
         self.LbTipo2.setStyleSheet("border: 2px solid black;\n"
 "border-radius: 20px;\n"
 "background-color: green\n"
@@ -57,37 +68,30 @@ class Ui_pokedex(object):
         self.LbTipo2.setAlignment(QtCore.Qt.AlignCenter)
         self.LbTipo2.setObjectName("LbTipo2")
         self.BtnPrevious = QtWidgets.QPushButton(self.FramePrincipal)
-        self.BtnPrevious.setGeometry(QtCore.QRect(260, 360, 131, 41))
+        self.BtnPrevious.setGeometry(QtCore.QRect(30, 320, 261, 61))
         self.BtnPrevious.setStyleSheet("border: 1px solid black;\n"
 "border-radius: 20px;")
         self.BtnPrevious.setObjectName("BtnPrevious")
         self.BtnNext = QtWidgets.QPushButton(self.FramePrincipal)
-        self.BtnNext.setGeometry(QtCore.QRect(430, 360, 131, 41))
+        self.BtnNext.setGeometry(QtCore.QRect(320, 320, 261, 61))
         self.BtnNext.setStyleSheet("border: 1px solid black;\n"
 "border-radius: 20px;")
         self.BtnNext.setObjectName("BtnNext")
-        self.BtnAdd = QtWidgets.QPushButton(self.FramePrincipal)
-        self.BtnAdd.setGeometry(QtCore.QRect(260, 310, 131, 41))
-        self.BtnAdd.setStyleSheet("border: 1px solid black;\n"
-"border-radius: 20px;")
-        self.BtnAdd.setObjectName("BtnAdd")
-        self.BtnEdit = QtWidgets.QPushButton(self.FramePrincipal)
-        self.BtnEdit.setGeometry(QtCore.QRect(430, 310, 131, 41))
-        self.BtnEdit.setStyleSheet("border: 1px solid black;\n"
-"border-radius: 20px;")
-        self.BtnEdit.setObjectName("BtnEdit")
         self.LbDescricao = QtWidgets.QLabel(self.FramePrincipal)
-        self.LbDescricao.setGeometry(QtCore.QRect(30, 420, 551, 161))
+        self.LbDescricao.setGeometry(QtCore.QRect(30, 410, 551, 161))
         self.LbDescricao.setStyleSheet("border: 1px solid black;\n"
 "padding: 15px;\n"
-"background-color: white")
+"background-color: #BEBEBE")
         self.LbDescricao.setText("")
+        self.LbDescricao.setTextFormat(QtCore.Qt.PlainText)
+        self.LbDescricao.setWordWrap(True)
         self.LbDescricao.setObjectName("LbDescricao")
         self.LbNome = QtWidgets.QLabel(self.FramePrincipal)
         self.LbNome.setGeometry(QtCore.QRect(160, 10, 281, 51))
         self.LbNome.setStyleSheet("border: 1px solid black;\n"
 "font-size: 24px; \n"
-"font-weight: bold;")
+"font-weight: bold;\n"
+"background-color: #BEBEBE;")
         self.LbNome.setFrameShape(QtWidgets.QFrame.WinPanel)
         self.LbNome.setFrameShadow(QtWidgets.QFrame.Plain)
         self.LbNome.setText("")
@@ -103,8 +107,6 @@ class Ui_pokedex(object):
         pokedex.setWindowTitle(_translate("pokedex", "MainWindow"))
         self.BtnPrevious.setText(_translate("pokedex", "Anterior"))
         self.BtnNext.setText(_translate("pokedex", "Próximo"))
-        self.BtnAdd.setText(_translate("pokedex", "Add Poké"))
-        self.BtnEdit.setText(_translate("pokedex", "Edit Poké"))
 
 
 if __name__ == "__main__":
